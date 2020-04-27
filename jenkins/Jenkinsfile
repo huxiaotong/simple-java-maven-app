@@ -7,8 +7,8 @@ pipeline {
         }
     }
     tools {
-        jdk 'java-1.8'
-        maven 'Maven-3.5.3'
+        jdk 'openjdk-1.8'
+        maven 'Maven-3.6.3'
         //SonarScanner 'SonarScanner 4.3.0.2102' 
     }
     stages {
