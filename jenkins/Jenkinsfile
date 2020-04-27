@@ -6,7 +6,7 @@ pipeline {
         }
     }
     tools { 
-        sonar-scanner 'SonarScanner' 
+        SonarScanner 'SonarScanner 4.3.0.2102' 
     }
     stages {
         stage('Build') {
