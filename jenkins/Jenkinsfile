@@ -5,6 +5,9 @@ pipeline {
             args '-v /root/.m2:/root/.m2'
         }
     }
+    tools { 
+        sonar-scanner 'SonarScanner' 
+    }
     stages {
         stage('Build') {
             steps {
@@ -23,10 +26,10 @@ pipeline {
         }
         stage('SonarQube analysis') {
             steps {
-                script {
-                    // requires SonarQube Scanner 2.8+
-                    scannerHome = tool 'SonarScanner';
-                }
+                //script {
+                //    // requires SonarQube Scanner 2.8+
+                //    scannerHome = tool 'SonarScanner';
+                //}
                 //tools {
                 //    sonarQube 'SonarScanner'
                 //}
