@@ -1,12 +1,15 @@
 pipeline {
     agent {
         docker {
-            image 'maven:3-alpine'
-            args '-v /root/.m2:/root/.m2'
+            //image 'maven:3-alpine'
+            image 'jenkins/jnlp-slave'
+            //args '-v /root/.m2:/root/.m2'
         }
     }
-    tools { 
-        SonarScanner 'SonarScanner 4.3.0.2102' 
+    tools {
+        jdk 'java-1.8'
+        maven 'Maven-3.5.3'
+        //SonarScanner 'SonarScanner 4.3.0.2102' 
     }
     stages {
         stage('Build') {
