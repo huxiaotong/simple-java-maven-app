@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     // requires SonarQube Scanner 2.8+
-                    scannerHome = tool 'SonarScanner 4.3.0.2102'
+                    scannerHome = tool 'SonarScanner'
                 }
                 //def scannerHome = tool 'SonarScanner 4.3.0.2102';
                 withSonarQubeEnv('SonarScanner') { // If you have configured more than one global server connection, you can specify its name
