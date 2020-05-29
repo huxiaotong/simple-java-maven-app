@@ -6,11 +6,11 @@ pipeline {
             //args '-v /root/.m2:/root/.m2'
         }
     }
-    //tools {
+    tools {
         //jdk 'jdk-11.0.2'
         Maven 'maven-3.6.3'
         //SonarScanner 'SonarScanner 4.3.0.2102' 
-    //}
+    }
     stages {
         stage('Build') {
             steps {
